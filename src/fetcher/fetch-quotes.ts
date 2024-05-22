@@ -31,7 +31,8 @@ export async function fetchQuotes(): Promise<ParseDataReturn> {
   // Well it did stop haha.
 
   const response = await axios.get(
-    'https://github.com/hackelite01/github-readme-cyber-quotes/blob/main/src/quotes/quotes.json'
+    // 'https://github.com/hackelite01/github-readme-cyber-quotes/blob/main/src/quotes/quotes.json'
+    'https://raw.githubusercontent.com/hackelite01/github-readme-cyber-quotes/main/src/quotes/quotes.json'
   );
 
   const data = response.data;
