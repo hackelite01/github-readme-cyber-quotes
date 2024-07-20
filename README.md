@@ -16,7 +16,9 @@
   </a>
   
 </p>
-
+<p align="center">
+  <a href="https://www.producthunt.com/posts/github-readme-cyber-quotes?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-github&#0045;readme&#0045;cyber&#0045;quotes" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=472532&theme=light" alt="GitHub&#0032;Readme&#0032;Cyber&#0032;Quotes - 🧑‍💻&#0032;Add&#0032;CyberSecurity&#0032;Quotes&#0032;To&#0032;Your&#0032;GitHub&#0032;Readme&#0032;👻 | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+</p>
 <!-- Links -->
 <p align="center">
   <a href="https://github-readme-cyber-quotes.vercel.app/api" target="_blank">View Demo</a>
