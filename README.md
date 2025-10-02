@@ -96,7 +96,7 @@ Copy the markdown below and paste it in your Github Readme.
 | Options | Default  | Available                                                                                   |
 | ------- | -------- | ------------------------------------------------------------------------------------------- |
 | type    | vertical | horizontal, vertical                                                                        |
-| theme   | light    | dark, chartreuse-dark, radical, merko, gruvbox, tokyonight, algolia, monokai, dracula, nord |
+| theme   | light    | dark, chartreuse-dark, radical, merko, gruvbox, tokyonight, algolia, monokai, dracula, nord, **halloween**, **cyberpunk**, **matrix**, **ocean**, **sunset**, **neon**, **vintage**, **arctic**, **synthwave**, **forest**, **minimal**, **corporate** |
 | quote   | -        | Customize your quote                                                                        |
 | author  | -        | The name of the quote's author                                                              |
 | border  | false    | true, false                                                                                 |
@@ -185,6 +185,50 @@ npx vercel dev
 > You need to add **?theme=nord** parameter.
 
 [![readme Quotes](https://github-readme-cyber-quotes.vercel.app/api?theme=nord)](https://github.com/hackelite01/github-readme-cyber-quotes)
+
+## 🎨 New Hacktoberfest 2025 Themes
+
+We've added 12 exciting new themes perfect for the season! 🎃
+
+### Halloween 🎃
+
+> Perfect for October! Use **?theme=halloween** parameter.
+
+[![readme Quotes](https://github-readme-cyber-quotes.vercel.app/api?theme=halloween)](https://github.com/hackelite01/github-readme-cyber-quotes)
+
+### Cyberpunk 🌆
+
+> Futuristic neon vibes. Use **?theme=cyberpunk** parameter.
+
+[![readme Quotes](https://github-readme-cyber-quotes.vercel.app/api?theme=cyberpunk)](https://github.com/hackelite01/github-readme-cyber-quotes)
+
+### Matrix 🔋
+
+> Classic green-on-black Matrix style. Use **?theme=matrix** parameter.
+
+[![readme Quotes](https://github-readme-cyber-quotes.vercel.app/api?theme=matrix)](https://github.com/hackelite01/github-readme-cyber-quotes)
+
+### Ocean 🌊
+
+> Calm blue ocean theme. Use **?theme=ocean** parameter.
+
+[![readme Quotes](https://github-readme-cyber-quotes.vercel.app/api?theme=ocean)](https://github.com/hackelite01/github-readme-cyber-quotes)
+
+### Synthwave 🌆
+
+> Retro 80s synthwave aesthetics. Use **?theme=synthwave** parameter.
+
+[![readme Quotes](https://github-readme-cyber-quotes.vercel.app/api?theme=synthwave)](https://github.com/hackelite01/github-readme-cyber-quotes)
+
+### More Themes Available
+
+- **Sunset** (`?theme=sunset`) - Warm sunset colors
+- **Neon** (`?theme=neon`) - Bright neon colors  
+- **Vintage** (`?theme=vintage`) - Classic vintage look
+- **Arctic** (`?theme=arctic`) - Cool arctic colors
+- **Forest** (`?theme=forest`) - Natural green theme
+- **Minimal** (`?theme=minimal`) - Clean minimal design
+- **Corporate** (`?theme=corporate`) - Professional business theme
 
 ## Custom
 

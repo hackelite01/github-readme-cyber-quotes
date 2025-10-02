@@ -125,6 +125,79 @@ export const themes: Record<string, Theme> = {
     author: '00B3D6',
     background: '000000',
     symbol: '00B3D6'
+  },
+  // 🎃 New Hacktoberfest 2025 Themes
+  halloween: {
+    quote: 'FF6B35',
+    author: 'FFD23F',
+    background: '1A0B2E',
+    symbol: 'FF6B35'
+  },
+  cyberpunk: {
+    quote: '00FFFF',
+    author: 'FF0080',
+    background: '0D0221',
+    symbol: '00FF41'
+  },
+  matrix: {
+    quote: '00FF41',
+    author: '65C965',
+    background: '000000',
+    symbol: '00FF41'
+  },
+  ocean: {
+    quote: '64B5F6',
+    author: '42A5F5',
+    background: '0D47A1',
+    symbol: '81C784'
+  },
+  sunset: {
+    quote: 'FFB74D',
+    author: 'FF8A65',
+    background: '3E2723',
+    symbol: 'FFAB91'
+  },
+  neon: {
+    quote: 'E91E63',
+    author: '00E676',
+    background: '121212',
+    symbol: '03DAC6'
+  },
+  vintage: {
+    quote: '8D6E63',
+    author: 'A1887F',
+    background: 'FFF8E1',
+    symbol: 'FF8F00'
+  },
+  arctic: {
+    quote: '37474F',
+    author: '455A64',
+    background: 'ECEFF1',
+    symbol: '00BCD4'
+  },
+  synthwave: {
+    quote: 'FF6EC7',
+    author: '72DEFF',
+    background: '2D1B69',
+    symbol: 'FFD700'
+  },
+  forest: {
+    quote: '2E7D32',
+    author: '388E3C',
+    background: 'E8F5E8',
+    symbol: '66BB6A'
+  },
+  minimal: {
+    quote: '212121',
+    author: '424242',
+    background: 'FFFFFF',
+    symbol: '757575'
+  },
+  corporate: {
+    quote: '1565C0',
+    author: '1976D2',
+    background: 'F5F5F5',
+    symbol: '42A5F5'
   }
 };
 
