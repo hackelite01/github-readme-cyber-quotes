@@ -1,0 +1,191 @@
+name: Hacktoberfest PR Management
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+  issues:
+    types: [opened, labeled, unlabeled]
+
+jobs:
+  hacktoberfest-management:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for Hacktoberfest participation
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { context } = require('@actions/github');
+            
+            // Check if repository has hacktoberfest topic
+            try {
+              const repo = await github.rest.repos.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo
+              });
+              
+              const hasHacktoberfestTopic = repo.data.topics && repo.data.topics.includes('hacktoberfest');
+              
+              if (hasHacktoberfestTopic) {
+                console.log('✅ Repository is participating in Hacktoberfest');
+              } else {
+                console.log('ℹ️ Repository does not have hacktoberfest topic');
+              }
+            } catch (error) {
+              console.log('Error checking repository topics:', error.message);
+            }
+
+  welcome-hacktoberfest-contributor:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.action == 'opened'
+    steps:
+      - name: Welcome first-time contributors
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { context } = require('@actions/github');
+            
+            // Check if this is the contributor's first PR
+            const prs = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'all',
+              sort: 'created',
+              direction: 'desc'
+            });
+            
+            const contributorPRs = prs.data.filter(pr => pr.user.login === context.payload.pull_request.user.login);
+            
+            if (contributorPRs.length === 1) {
+              // This is their first PR
+              const welcomeMessage = `
+            ## 🎃 Welcome to Hacktoberfest 2025! 
+            
+            Thank you @${context.payload.pull_request.user.login} for your first contribution to **GitHub Readme Cyber Quotes**! 🎉
+            
+            ### 📋 What happens next?
+            - Our maintainers will review your pull request
+            - We may suggest some changes or improvements
+            - Once approved, your contribution will be merged
+            
+            ### 🏆 Hacktoberfest Tips
+            - Quality contributions are more valuable than quantity
+            - Read our [Contributing Guide](./CONTRIBUTING.md) for best practices
+            - Join the [Hacktoberfest Discord](https://discord.com/invite/digitalocean) community
+            
+            ### 🤝 Need Help?
+            - Comment on this PR if you have questions
+            - Check our [documentation](./README.md) for guidance
+            - Don't hesitate to ask for help!
+            
+            Happy contributing! 🚀
+            `;
+            
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: welcomeMessage
+              });
+            }
+
+  label-management:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Auto-label Hacktoberfest PRs
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { context } = require('@actions/github');
+            
+            // Check if PR is created during October (Hacktoberfest month)
+            const currentDate = new Date();
+            const isOctober = currentDate.getMonth() === 9; // October is month 9 (0-indexed)
+            
+            // Get current labels
+            const currentLabels = context.payload.pull_request.labels.map(label => label.name);
+            
+            // Auto-add hacktoberfest label if it's October and not already labeled
+            if (isOctober && !currentLabels.includes('hacktoberfest')) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                labels: ['hacktoberfest']
+              });
+              
+              console.log('Added hacktoberfest label to PR');
+            }
+
+  validate-contribution:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Validate PR quality
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { context } = require('@actions/github');
+            
+            // Get PR details
+            const pr = context.payload.pull_request;
+            const title = pr.title.toLowerCase();
+            const body = pr.body || '';
+            
+            let qualityScore = 0;
+            let feedback = [];
+            
+            // Check title quality
+            if (title.length < 10) {
+              feedback.push('⚠️ PR title is quite short. Consider adding more descriptive information.');
+            } else {
+              qualityScore += 1;
+            }
+            
+            // Check description quality  
+            if (body.length < 50) {
+              feedback.push('⚠️ PR description is quite short. Please provide more details about your changes.');
+            } else {
+              qualityScore += 1;
+            }
+            
+            // Check for common spam indicators
+            const spamKeywords = ['test', 'update readme', 'fix typo', 'minor change'];
+            const hasSpamIndicators = spamKeywords.some(keyword => title.includes(keyword) && body.length < 30);
+            
+            if (hasSpamIndicators) {
+              feedback.push('🚨 This PR might need more substantial changes. Consider adding more value to your contribution.');
+            } else {
+              qualityScore += 1;
+            }
+            
+            // Provide feedback if needed
+            if (feedback.length > 0) {
+              const feedbackMessage = `
+            ## 📝 Contribution Review
+            
+            Thank you for your contribution! Here's some feedback to help improve your PR:
+            
+            ${feedback.map(item => `${item}`).join('\n')}
+            
+            ### 💡 Tips for quality contributions:
+            - Provide clear, descriptive commit messages
+            - Include detailed explanations of your changes
+            - Test your changes thoroughly
+            - Follow the project's contributing guidelines
+            
+            Quality Score: ${qualityScore}/3
+            
+            Don't worry if you need to make improvements - we're here to help! 🤝
+            `;
+            
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                body: feedbackMessage
+              });
+            }

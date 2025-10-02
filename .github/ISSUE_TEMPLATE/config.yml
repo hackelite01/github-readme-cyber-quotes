@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🎃 Hacktoberfest Discord
+    url: https://discord.com/invite/digitalocean
+    about: Join the official Hacktoberfest Discord community for support and discussions
+  - name: 💬 GitHub Discussions
+    url: https://github.com/hackelite01/github-readme-cyber-quotes/discussions
+    about: Ask questions and discuss ideas with the community
+  - name:  Documentation
+    url: https://github.com/hackelite01/github-readme-cyber-quotes/blob/main/README.md
+    about: Check our comprehensive documentation and usage examples

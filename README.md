@@ -8,13 +8,30 @@
 <!-- Badges -->
 <p align="center">
   <a href="https://github.com/hackelite01/github-readme-cyber-quotes/issues">
-    <img src="https://img.shields.io/github/issues/hackelite01/github-readme-cyber-quotes?style=flat-square">
+    <img src="https://img.shields.io/github/issues/hackelite01/github-readme-cyber-quotes?style=flat-square&color=orange&label=Issues">
   </a>
-
   <a href="https://github.com/hackelite01/github-readme-cyber-quotes/pulls">
-    <img src="https://img.shields.io/github/issues-pr/hackelite01/github-readme-cyber-quotes?style=flat-square">
+    <img src="https://img.shields.io/github/issues-pr/hackelite01/github-readme-cyber-quotes?style=flat-square&color=blue&label=Pull%20Requests">
   </a>
-  
+  <a href="https://github.com/hackelite01/github-readme-cyber-quotes/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/hackelite01/github-readme-cyber-quotes?style=flat-square&color=green">
+  </a>
+  <a href="https://github.com/hackelite01/github-readme-cyber-quotes/stargazers">
+    <img src="https://img.shields.io/github/stars/hackelite01/github-readme-cyber-quotes?style=flat-square&color=yellow">
+  </a>
+</p>
+
+<!-- Hacktoberfest Badge -->
+<p align="center">
+  <a href="https://hacktoberfest.com/">
+    <img src="https://img.shields.io/badge/Hacktoberfest-2025-orange?style=for-the-badge&logo=hacktoberfest&logoColor=white" alt="Hacktoberfest 2025">
+  </a>
+  <a href="https://github.com/hackelite01/github-readme-cyber-quotes/issues?q=is%3Aopen+is%3Aissue+label%3Ahacktoberfest">
+    <img src="https://img.shields.io/github/issues/hackelite01/github-readme-cyber-quotes/hacktoberfest?style=for-the-badge&color=purple&label=Hacktoberfest%20Issues" alt="Hacktoberfest Issues">
+  </a>
+  <a href="https://github.com/hackelite01/github-readme-cyber-quotes/issues?q=is%3Aopen+is%3Aissue+label%3A%22good%20first%20issue%22">
+    <img src="https://img.shields.io/github/issues/hackelite01/github-readme-cyber-quotes/good%20first%20issue?style=for-the-badge&color=green&label=Good%20First%20Issues" alt="Good First Issues">
+  </a>
 </p>
 <p align="center">
   <a href="https://www.producthunt.com/posts/github-readme-cyber-quotes?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-github&#0045;readme&#0045;cyber&#0045;quotes" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=472532&theme=light" alt="GitHub&#0032;Readme&#0032;Cyber&#0032;Quotes - 🧑‍💻&#0032;Add&#0032;CyberSecurity&#0032;Quotes&#0032;To&#0032;Your&#0032;GitHub&#0032;Readme&#0032;👻 | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
@@ -30,6 +47,41 @@
 
 - [Dynamic quotes in your GitHub README](#Usage)
 - [Customize your own quote](#Custom)
+
+## 🎃 Hacktoberfest 2025
+
+**We're participating in Hacktoberfest 2025!** 🎉
+
+This repository welcomes contributions from developers of all skill levels. Whether you're a seasoned contributor or this is your first open source contribution, we'd love to have you on board!
+
+### 🌟 How to Contribute
+
+- 🔍 **Browse Issues**: Look for issues labeled [`hacktoberfest`](https://github.com/hackelite01/github-readme-cyber-quotes/labels/hacktoberfest) or [`good first issue`](https://github.com/hackelite01/github-readme-cyber-quotes/labels/good%20first%20issue)
+- 💡 **Add Quotes**: Contribute new cybersecurity quotes to our collection
+- 🎨 **Create Themes**: Design new visual themes for the quote cards
+- 📚 **Improve Docs**: Help us improve documentation and guides
+- 🐛 **Fix Bugs**: Help identify and fix issues
+
+### 🏷️ Contribution Ideas
+
+- Add new cybersecurity quotes from industry experts
+- Create new card themes and layouts  
+- Improve API functionality and error handling
+- Add support for multiple languages
+- Enhance documentation and examples
+- Write tests and improve code quality
+
+[**Start Contributing →**](CONTRIBUTING.md) | [**View Issues →**](https://github.com/hackelite01/github-readme-cyber-quotes/issues?q=is%3Aopen+is%3Aissue+label%3Ahacktoberfest)
+
+### 🎯 Hacktoberfest Goals
+
+We aim to:
+- Expand our quote collection with quality cybersecurity wisdom
+- Improve accessibility and usability
+- Build a stronger community around cybersecurity education
+- Support newcomers in their open source journey
+
+**Quality over Quantity**: We follow Hacktoberfest's values and prioritize meaningful contributions that add real value to the project.
 
 ## Usage ⚡️
 
